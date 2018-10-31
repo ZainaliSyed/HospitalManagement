@@ -95,7 +95,7 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.hospitalmanagement"
@@ -137,6 +137,9 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-open-settings')
+    compile project(':react-native-google-signin')
+    compile project(':react-native-custom-tabs')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     compile "com.facebook.react:react-native:+"  // From node_modules

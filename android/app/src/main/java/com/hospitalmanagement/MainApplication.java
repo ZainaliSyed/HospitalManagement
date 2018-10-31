@@ -3,6 +3,9 @@ package com.hospitalmanagement;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.opensettings.OpenSettingsPackage;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
+import com.github.droibit.android.reactnative.customtabs.CustomTabsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +25,10 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new OpenSettingsPackage(),
+            new RNGoogleSigninPackage(),
+            new CustomTabsPackage()
       );
     }
 
